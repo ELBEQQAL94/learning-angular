@@ -1,7 +1,10 @@
 ## App Features
 
 - [X] change background app to dark mode
-- [ ] create repo for the project
+- [X] create repo for the project
+- [X] learn render list in angular using @for instead of old way
+    - [X] create chat list component
+    - [X] create mock of lists
 - [ ] plus button to add or create new chat (install or add icon lib)
 - [ ] basic header include app title as logo (my chat as name of our project)
 - [ ] chat history like (jack, miky, anabella...)
