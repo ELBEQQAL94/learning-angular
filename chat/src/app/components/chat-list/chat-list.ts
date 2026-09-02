@@ -1,30 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { ChatService } from '../../services/chat-service';
+import { ChatHistory } from '../../models/chat-history.model';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-chat-list',
-  imports: [],
+  imports: [MatIcon],
   templateUrl: './chat-list.html',
   styleUrl: './chat-list.css',
 })
 export class ChatList {
-  protected readonly chatList = [
-    {
-      id: '1',
-      name: 'jack',
-      avatar: 'avatarUrl',
-      lastMessage: "see you later!"
-    },
-    {
-      id: '2',
-      name: 'bat',
-      avatar: 'avatarUrl',
-      lastMessage: "Hi!"
-    },
-    {
-      id: '3',
-      name: 'ocklacia',
-      avatar: 'avatarUrl',
-      lastMessage: "ok"
-    },
-  ]
+  private chatService = inject(ChatService);
+  
+  chats = signal<ChatHistory[]>([]);
+  loading = signal<boolean>(true);
+
+  ngOnInit() {
+    this.chatService.getChatHistory().subscribe((data) => {
+      this.chats.set(data);
+      this.loading.set(false);
+    })
+  }
 }

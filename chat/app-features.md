@@ -5,12 +5,14 @@
 - [X] learn render list in angular using @for instead of old way
     - [X] create chat list component
     - [X] create mock of lists
+    - [X] create chat history model
 - [ ] plus button to add or create new chat (install or add icon lib)
 - [ ] basic header include app title as logo (my chat as name of our project)
 - [ ] chat history like (jack, miky, anabella...)
-    - [ ] design user model
-    - [ ] design message model
-    - [ ] create mock data for now for all messages history
+    - [X] design user model
+    - [X] design message model
+    - [X] create mock data for now for all messages history
+    - [ ] create chat service to load mock data like HTTP call
 - [ ] click on any chat history and have ability to see history of all messages
 - [ ] ability to add new chat
 - [ ] add basic features
@@ -18,3 +20,4 @@
 - [ ] learn about websocket from scratch
 - [ ] setup websocket in client side
 - [ ] setup websocket in server side
+- [ ] add basic auth using email and password to define auth user and learning guards in angular.

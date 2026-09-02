@@ -1,8 +1,17 @@
-<div>
-    @for (item of chatList; track item) {
-        <div>
-        name: {{ item.name }}
-        lastMessage: {{ item.lastMessage }}
+<div class="mt-4 mb-4">
+  @if (loading()) {
+    <div>Loading...</div>
+  } @else {
+    @for (chat of chats(); track chat.id) {
+      <div class="flex items-center">
+        <mat-icon aria-hidden="false" aria-label="avatar icon" fontIcon="account_circle"></mat-icon>
+        <div class="pl-2">
+          <span class="pr-2">{{ chat.participants[0].first_name }}</span>
+          <span>{{ chat.participants[0].last_name }}</span>
         </div>
+      </div>
+      <p>{{ chat.messages[0].content }}</p>
+      <hr />
     }
+  }
 </div>
