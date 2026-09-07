@@ -1,10 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { Navbar } from "./components/navbar/navbar";
-import { ChatList } from "./components/chat-list/chat-list";
+import { ChatContainer } from "./components/chat-container/chat-container";
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, ChatList],
+  imports: [ChatContainer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

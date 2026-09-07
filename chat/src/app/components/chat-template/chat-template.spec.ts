@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Navbar } from './navbar';
+import { ChatTemplate } from './chat-template';
 
-describe('Navbar', () => {
-  let component: Navbar;
-  let fixture: ComponentFixture<Navbar>;
+describe('ChatTemplate', () => {
+  let component: ChatTemplate;
+  let fixture: ComponentFixture<ChatTemplate>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Navbar],
+      imports: [ChatTemplate],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Navbar);
+    fixture = TestBed.createComponent(ChatTemplate);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

@@ -1,18 +1,20 @@
 ## App Features
 
-- [X] change background app to dark mode
-- [X] create repo for the project
-- [X] learn render list in angular using @for instead of old way
-    - [X] create chat list component
-    - [X] create mock of lists
-    - [X] create chat history model
+- [x] change background app to dark mode
+- [x] create repo for the project
+- [x] learn render list in angular using @for instead of old way
+  - [x] create chat list component
+  - [x] create mock of lists
+  - [x] create chat history model
 - [ ] plus button to add or create new chat (install or add icon lib)
-- [ ] basic header include app title as logo (my chat as name of our project)
-- [ ] chat history like (jack, miky, anabella...)
-    - [X] design user model
-    - [X] design message model
-    - [X] create mock data for now for all messages history
-    - [ ] create chat service to load mock data like HTTP call
+- [x] basic header include app title as logo (my chat as name of our project)
+- [x] chat history like (jack, miky, anabella...)
+  - [x] design user model
+  - [x] design message model
+  - [x] create mock data for now for all messages history
+  - [x] create chat service to load mock data like HTTP call
+- [ ] learning click events
+  - [ ] click on any chat and click event will be fired
 - [ ] click on any chat history and have ability to see history of all messages
 - [ ] ability to add new chat
 - [ ] add basic features
@@ -21,3 +23,6 @@
 - [ ] setup websocket in client side
 - [ ] setup websocket in server side
 - [ ] add basic auth using email and password to define auth user and learning guards in angular.
+- [ ] design box where show chat history and ability to send message
+- [x] add time to chat history
+- [x] learn how to show json data in browser using json pipe
