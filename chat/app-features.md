@@ -6,7 +6,6 @@
   - [x] create chat list component
   - [x] create mock of lists
   - [x] create chat history model
-- [ ] plus button to add or create new chat (install or add icon lib)
 - [x] basic header include app title as logo (my chat as name of our project)
 - [x] chat history like (jack, miky, anabella...)
   - [x] design user model
@@ -26,3 +25,16 @@
 - [x] design box where show chat history and ability to send message
 - [x] add time to chat history
 - [x] learn how to show json data in browser using json pipe
+- [x] create message box component that is UI of message, date
+  - [x] message box component should take as inputs: message, date, position or right by default else will display component in the left.
+- [ ] figureout why isNewChat state not visible in redux dev tools
+- [ ] when click on any chat should set chat id in state
+- [ ] check if there is a chat history with user if yes display last messages
+- [ ] add ability to show message in the left if it owner of the message and the right if message not related to user owner
+- [ ] add message date
+- [ ] add ability to see if user recieve message or not
+- [ ] add ability to display user last loggedin
+- [ ] add ability to display if user online
+- [ ] add ability to display if user read the message
+- [ ] learning rxjs
+- [ ] check app performance for many data and handle many users

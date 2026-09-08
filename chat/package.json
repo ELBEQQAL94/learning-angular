@@ -19,8 +19,11 @@
     "@angular/material": "^21.2.14",
     "@angular/platform-browser": "^21.2.0",
     "@angular/router": "^21.2.0",
+    "@reduxjs/angular-redux": "^2.0.1",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@reduxjs/toolkit": "^2.2.7",
+    "redux": "^5.0.0"
   },
   "devDependencies": {
     "@angular/build": "^21.2.22",
