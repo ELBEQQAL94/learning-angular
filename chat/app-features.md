@@ -13,16 +13,16 @@
   - [x] design message model
   - [x] create mock data for now for all messages history
   - [x] create chat service to load mock data like HTTP call
-- [ ] learning click events
-  - [ ] click on any chat and click event will be fired
+- [x] learning click events
+  - [x] click on any chat and click event will be fired
 - [ ] click on any chat history and have ability to see history of all messages
 - [ ] ability to add new chat
-- [ ] add basic features
+- [x] add basic features
 - [ ] call backend for create,get messages history
 - [ ] learn about websocket from scratch
 - [ ] setup websocket in client side
 - [ ] setup websocket in server side
 - [ ] add basic auth using email and password to define auth user and learning guards in angular.
-- [ ] design box where show chat history and ability to send message
+- [x] design box where show chat history and ability to send message
 - [x] add time to chat history
 - [x] learn how to show json data in browser using json pipe
