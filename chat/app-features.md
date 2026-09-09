@@ -27,7 +27,8 @@
 - [x] learn how to show json data in browser using json pipe
 - [x] create message box component that is UI of message, date
   - [x] message box component should take as inputs: message, date, position or right by default else will display component in the left.
-- [ ] figureout why isNewChat state not visible in redux dev tools
+- [x] figureout why isNewChat state not visible in redux dev tools
+- [ ] user name and date should be at the same row
 - [ ] when click on any chat should set chat id in state
 - [ ] check if there is a chat history with user if yes display last messages
 - [ ] add ability to show message in the left if it owner of the message and the right if message not related to user owner
