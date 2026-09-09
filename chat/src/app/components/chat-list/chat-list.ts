@@ -24,6 +24,8 @@ export class ChatList {
   }
 
   show(chatId: string) {
-    console.log(`chat id: ${chatId}`);
+    this.chatService.getChatHistoryById(chatId).subscribe((data) => {
+      console.log(`selectedChat from chat-list: ${JSON.stringify(data)}`);
+    });
   }
 }

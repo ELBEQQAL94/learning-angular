@@ -3,16 +3,19 @@
     <div>Loading...</div>
   } @else {
     @for (chat of chats(); track chat.id) {
-      <div class="cursor-pointer" (click)="show(chat.id)">
+      <div class="cursor-pointer p-4 hover:bg-gray-400 hover:text-black" (click)="show(chat.id)">
         <div class="flex items-center">
           <mat-icon
             aria-hidden="false"
             aria-label="avatar icon"
             fontIcon="account_circle"
           ></mat-icon>
-          <div class="pl-2">
-            <span class="pr-2">{{ chat.participants[0].first_name }}</span>
-            <span>{{ chat.participants[0].last_name }}</span>
+          <div class="flex justify-between items-center w-full pl-2 font-bold">
+            <div>
+              <span class="pr-2 mb-2">{{ chat.participants[0].first_name }}</span>
+              <span>{{ chat.participants[0].last_name }}</span>
+            </div>
+            <p>{{ chat.messages[0].created_at | date: 'h:mm' }}</p>
           </div>
         </div>
         @if (chat.messages[0].from === 'me') {
@@ -20,8 +23,6 @@
         } @else {
           <p>{{ chat.messages[0].content }}</p>
         }
-
-        <p>{{ chat.messages[0].created_at | date }}</p>
       </div>
       <hr />
     }

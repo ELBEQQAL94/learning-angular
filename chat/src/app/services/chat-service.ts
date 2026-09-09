@@ -12,9 +12,12 @@ export class ChatService {
   }
 
   getChatHistoryById(id: string): Observable<ChatHistory | undefined> {
+    console.log(`chatId: ${id}`);
     return of(mockChatHistory).pipe(
-      delay(500),
-      map(chatHistory => chatHistory.find(chat => chat.id))
-    );
+      map(chatHistory => {
+        const selectedChat = chatHistory.find(chat => chat.id === id)
+        return selectedChat;
+      })
+    )
   }
 }
