@@ -1,13 +1,13 @@
-import { Injectable, signal } from '@angular/core';
+import { AfterContentChecked, AfterViewInit, ElementRef, Injectable, OnInit, signal, ViewChild } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class NewChatState {
-  private readonly _isNewChat = signal(false);
-  isNewChat = this._isNewChat.asReadonly();
+  private readonly _isOpenChat = signal(false);
+  isOpenChat = this._isOpenChat.asReadonly();
 
-  openNewChat() {
-    this._isNewChat.set(true);
+  openChat() {
+    this._isOpenChat.set(true);
   }
 }

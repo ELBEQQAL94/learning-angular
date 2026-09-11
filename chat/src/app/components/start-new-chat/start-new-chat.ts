@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, Input, OnChanges, OnInit, SimpleChange, SimpleChanges, ViewChild } from '@angular/core';
 import { NewChatState } from '../../services/new-chat-state';
 
 @Component({
@@ -8,9 +8,9 @@ import { NewChatState } from '../../services/new-chat-state';
   styleUrl: './start-new-chat.css',
 })
 export class StartNewChat {
-  private newChatState = inject(NewChatState);
+  private newChatStateService = inject(NewChatState);
 
   startNewChat() {
-    this.newChatState.openNewChat();
+    this.newChatStateService.isOpenChat();
   }
 }

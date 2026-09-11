@@ -3,6 +3,8 @@ import { ChatService } from '../../services/chat-service';
 import { ChatHistory } from '../../models/chat-history.model';
 import { MatIcon } from '@angular/material/icon';
 import { DatePipe } from '@angular/common';
+import { Observable } from 'rxjs';
+import { NewChatState } from '../../services/new-chat-state';
 
 @Component({
   selector: 'app-chat-list',
@@ -11,6 +13,7 @@ import { DatePipe } from '@angular/common';
   styleUrl: './chat-list.css',
 })
 export class ChatList {
+  private newChatStateService = inject(NewChatState);
   private chatService = inject(ChatService);
   
   chats = signal<ChatHistory[]>([]);
@@ -27,5 +30,6 @@ export class ChatList {
     this.chatService.getChatHistoryById(chatId).subscribe((data) => {
       console.log(`selectedChat from chat-list: ${JSON.stringify(data)}`);
     });
+    this.newChatStateService.openChat();
   }
 }

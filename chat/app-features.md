@@ -30,7 +30,23 @@
 - [x] figureout why isNewChat state not visible in redux dev tools
 - [x] user name and date should be at the same row
 - [x] when click on any chat should call getChatById service no state needed
+- [x] learn about subscription in rxjs
+- [x] learning lifecycles
+  - [x] ngOnInit
+  - [x] ngOnChanges
+  - [x] ngDoCheck
+  - [x] ngAfterContentInit
+  - [x] ngAfterViewInit
+  - [x] ngAfterContentChecked
+  - [x] ngAfterViewChecked
+- [ ] learning directives
+- [ ] learning pipes
+- [ ] learning guards
+- [ ] learning signals in depths
 - [ ] check if there is a chat history with user if yes display last messages
+  - [x] get chat by id
+  - [ ] when click on chat should display chat template component instead
+  - [ ] chat template component should recieve chat data and display it
 - [ ] add ability to show message in the left if it owner of the message and the right if message not related to user owner
 - [ ] add message date
 - [ ] add ability to see if user recieve message or not
