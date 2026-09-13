@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ChatList } from '../chat-list/chat-list';
 import { ChatTemplate } from "../chat-template/chat-template";
 import { DefaultChatMessage } from "../default-chat-message/default-chat-message";
+import { NewChatState } from '../../services/new-chat-state';
 
 @Component({
   selector: 'app-chat-container',
@@ -9,4 +10,7 @@ import { DefaultChatMessage } from "../default-chat-message/default-chat-message
   templateUrl: './chat-container.html',
   styleUrl: './chat-container.css',
 })
-export class ChatContainer {}
+export class ChatContainer {
+  private newChatStateService = inject(NewChatState);
+  
+}
