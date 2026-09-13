@@ -1,5 +1,6 @@
 import { DatePipe } from '@angular/common';
 import { Component, input, signal } from '@angular/core';
+import { Message } from '../../models/message.model';
 
 @Component({
   selector: 'app-message-box',
@@ -8,6 +9,5 @@ import { Component, input, signal } from '@angular/core';
   styleUrl: './message-box.css',
 })
 export class MessageBox {
-  message = input.required<string>();
-  date = input.required<string>();
+  message = input.required<Message>();
 }

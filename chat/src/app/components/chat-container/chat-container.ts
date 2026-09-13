@@ -3,6 +3,7 @@ import { ChatList } from '../chat-list/chat-list';
 import { ChatTemplate } from "../chat-template/chat-template";
 import { DefaultChatMessage } from "../default-chat-message/default-chat-message";
 import { NewChatState } from '../../services/new-chat-state';
+import { ChatService } from '../../services/chat-service';
 
 @Component({
   selector: 'app-chat-container',
@@ -12,5 +13,8 @@ import { NewChatState } from '../../services/new-chat-state';
 })
 export class ChatContainer {
   private newChatStateService = inject(NewChatState);
-  
+  private chatService = inject(ChatService);
+
+  isChatOpen = this.newChatStateService.isOpenChat;
+  chatList = this.chatService.getChatHistoryById()
 }

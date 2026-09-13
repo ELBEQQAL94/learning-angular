@@ -1,0 +1,17 @@
+<div appAppChatHover class="p-4">
+  <div class="flex items-center">
+    <mat-icon aria-hidden="false" aria-label="avatar icon" fontIcon="account_circle"></mat-icon>
+    <div class="flex justify-between items-center w-full pl-2 font-bold">
+      <div>
+        <span class="pr-2 mb-2">{{ chat().participants[0].first_name }}</span>
+        <span>{{ chat().participants[0].last_name }}</span>
+      </div>
+      <p>{{ chat().messages[0].created_at | date: 'h:mm' }}</p>
+    </div>
+  </div>
+  @if (chat().messages[0].from === 'me') {
+    <p>you: {{ chat().messages[0].content }}</p>
+  } @else {
+    <p>{{ chat().messages[0].content }}</p>
+  }
+</div>

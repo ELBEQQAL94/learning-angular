@@ -1,20 +1,19 @@
 import { Component, inject, signal } from '@angular/core';
 import { ChatService } from '../../services/chat-service';
 import { ChatHistory } from '../../models/chat-history.model';
-import { MatIcon } from '@angular/material/icon';
-import { DatePipe } from '@angular/common';
-import { Observable } from 'rxjs';
 import { NewChatState } from '../../services/new-chat-state';
+import { ChatCard } from '../chat-card/chat-card';
 
 @Component({
   selector: 'app-chat-list',
-  imports: [MatIcon, DatePipe],
+  imports: [ChatCard],
   templateUrl: './chat-list.html',
   styleUrl: './chat-list.css',
 })
 export class ChatList {
   private newChatStateService = inject(NewChatState);
   private chatService = inject(ChatService);
+  
   
   chats = signal<ChatHistory[]>([]);
   loading = signal<boolean>(true);

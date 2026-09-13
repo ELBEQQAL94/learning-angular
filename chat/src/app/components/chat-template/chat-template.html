@@ -1,4 +1,9 @@
 <div class="flex h-full flex-col justify-end p-4">
-  <app-message-box date="2026-01-21T09:00:00Z" message="Hi, how are u?"></app-message-box>
-  <app-message-input></app-message-input>
+  @for (chat of chats(); track chat.id) {
+    {{ chat | json }}
+    @for (message of chat.messages; track message.id) {
+      <app-message-box [message]="message" />
+    }
+  }
+  <app-message-input />
 </div>
