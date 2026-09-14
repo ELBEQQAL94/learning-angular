@@ -40,13 +40,19 @@
   - [x] ngAfterContentChecked
   - [x] ngAfterViewChecked
 - [x] learning directives
+- [ ] learning HTTP calls
+- [ ] setup backend server
+- [ ] create basic api to test backend server
+- [ ] create new chat POST /chats
+- [ ] create GET /chats
+- [ ] insert message in chat PUT /chats/new-message
 - [ ] learning pipes
 - [ ] learning guards
 - [ ] learning signals in depths
 - [ ] check if there is a chat history with user if yes display last messages
   - [x] get chat by id
   - [x] when click on chat should display chat template component instead
-  - [ ] move init state to service and handle states updated from parent component itself
+  - [x] move init state to service and handle states updated from parent component itself
   - [ ] chat template component should recieve chat data and display it
 - [ ] add ability to show message in the left if it owner of the message and the right if message not related to user owner
 - [ ] add message date
