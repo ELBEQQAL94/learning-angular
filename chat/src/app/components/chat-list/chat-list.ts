@@ -15,20 +15,22 @@ export class ChatList {
   private chatService = inject(ChatService);
   
   
-  chats = signal<ChatHistory[]>([]);
-  loading = signal<boolean>(true);
+  loadingChat = this.chatService.loadingChat;
+  chats = this.chatService.chats;
 
   ngOnInit() {
-    this.chatService.getChatHistory().subscribe((data) => {
-      this.chats.set(data);
-      this.loading.set(false);
-    })
+    this.chatService.getChatHistory();
+    console.log(`loadingChat: ${this.loadingChat}`);
+    
   }
 
-  show(chatId: string) {
-    this.chatService.getChatHistoryById(chatId).subscribe((data) => {
-      console.log(`selectedChat from chat-list: ${JSON.stringify(data)}`);
-    });
-    this.newChatStateService.openChat();
+  show(chatId: string | undefined | null) {
+    if (chatId) {
+      this.chatService.getChatHistoryById(chatId);
+      this.newChatStateService.openChat();
+    } else {
+      console.log("Chat Id not exists");
+      
+    }
   }
 }

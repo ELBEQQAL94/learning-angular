@@ -1,5 +1,5 @@
 <div class="mt-4 mb-4">
-  @if (loading()) {
+  @if (loadingChat()) {
     <div>Loading...</div>
   } @else {
     @for (chat of chats(); track chat.id) {
