@@ -40,7 +40,9 @@
   - [x] ngAfterContentChecked
   - [x] ngAfterViewChecked
 - [x] learning directives
-- [ ] learning HTTP calls
+- [ ] learning signals (compute, effect, update...)
+- [ ] Forms and Forms validation
+- [ ] learning HTTP clients
 - [ ] setup backend server
 - [ ] create basic api to test backend server
 - [ ] create new chat POST /chats
@@ -62,3 +64,6 @@
 - [ ] add ability to display if user read the message
 - [ ] learning rxjs
 - [ ] check app performance for many data and handle many users
+- [ ] provide user ability to send files upload/download
+- [ ] learn how to avoid memeroy leaks
+- [ ] use @if async once we display user info after working on authentication
