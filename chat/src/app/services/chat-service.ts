@@ -12,21 +12,16 @@ export class ChatService {
 
   private http = inject(HttpClient);
 
-  _selectedChat = signal<ChatHistory | undefined>(defaultChatHistory);
-  _chats = signal<ChatHistory[]>([]);
-  _loadingChat = signal(true);
+  private readonly _selectedChat = signal<ChatHistory | undefined>(defaultChatHistory);
+  private readonly _chats = signal<ChatHistory[]>([]);
+  private readonly _loadingChat = signal(true);
 
-  chats = this._chats.asReadonly();
-  selectedChat = this._selectedChat.asReadonly();
-  loadingChat = this._loadingChat.asReadonly();
+  readonly chats = this._chats.asReadonly();
+  readonly selectedChat = this._selectedChat.asReadonly();
+  readonly loadingChat = this._loadingChat.asReadonly();
 
   getChatHistory() {
-    const basedPramas = new HttpParams().set('q','test');
-    const basedHeaders = new HttpHeaders().set('x-header', 'dev');
-    this.http.get("http://localhost:5050/test", {
-      params: basedPramas.set('details','enabled'),
-      headers: basedHeaders.set('x-header', 'test')
-    }).subscribe({
+    this.http.get("http://localhost:5050").subscribe({
       next: (data) => console.log(`Data fetched: ${JSON.stringify(data)}`),
       error: (err) => console.log(`error: ${JSON.stringify(err)}`)
     });

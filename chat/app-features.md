@@ -42,7 +42,7 @@
 - [x] learning directives
 - [ ] learning signals (compute, effect, update...)
 - [ ] Forms and Forms validation
-- [ ] learning HTTP clients
+- [x] learning HTTP clients
 - [ ] setup backend server
 - [ ] create basic api to test backend server
 - [ ] create new chat POST /chats
