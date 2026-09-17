@@ -1,0 +1,9 @@
+<input (input)="query.set($event.target.value)" />
+
+@if (results.isLoading()) {
+  <p>Searching...</p>
+}
+
+@for (item of results.value(); track item.id) {
+  <li>{{ item.name }}</li>
+}

@@ -1,0 +1,10 @@
+<select name="shipping-method-options" (change)="change($event)">
+  <option value="">Select shipping method</option>
+  @for (options of shippingOptions()(); track options.id; let i = $index) {
+    <option [value]="i" [selected]="options.id === selectedShippingOption().id">
+      {{ options.label }}
+    </option>
+  }
+</select>
+<p>Selected option: {{ selectedShippingOption().label }}</p>
+<button (click)="drop()">DROP</button>

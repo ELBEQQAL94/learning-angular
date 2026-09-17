@@ -43,14 +43,13 @@
 - [ ] learning signals (compute, effect, update...)
 - [ ] Forms and Forms validation
 - [x] learning HTTP clients
-- [ ] setup backend server
-- [ ] create basic api to test backend server
+- [x] setup backend server
+- [x] create basic api to test backend server
 - [ ] create new chat POST /chats
 - [ ] create GET /chats
 - [ ] insert message in chat PUT /chats/new-message
 - [ ] learning pipes
 - [ ] learning guards
-- [ ] learning signals in depths
 - [ ] check if there is a chat history with user if yes display last messages
   - [x] get chat by id
   - [x] when click on chat should display chat template component instead
