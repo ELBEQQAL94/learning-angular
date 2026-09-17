@@ -1,4 +1,4 @@
-import { Component, linkedSignal, signal, Signal } from '@angular/core';
+import { Component, linkedSignal, signal, Signal, ChangeDetectionStrategy } from '@angular/core';
 import { single } from 'rxjs';
 
 interface ShippingMethod {
@@ -10,42 +10,43 @@ interface ShippingMethod {
 function getShippingOptions(): Signal<ShippingMethod[]> {
   return signal([
     {
-      id: "1",
-      value: "value-1",
-      label: "label-1"
+      id: '1',
+      value: 'value-1',
+      label: 'label-1',
     },
     {
-      id: "2",
-      value: "value-2",
-      label: "label-2"
+      id: '2',
+      value: 'value-2',
+      label: 'label-2',
     },
     {
-      id: "3",
-      value: "value-3",
-      label: "label-3"
+      id: '3',
+      value: 'value-3',
+      label: 'label-3',
     },
-  ])
+  ]);
 }
 
 function getShippingOptions1(): Signal<ShippingMethod[]> {
   return signal([
     {
-      id: "1",
-      value: "value-1",
-      label: "label-1"
+      id: '1',
+      value: 'value-1',
+      label: 'label-1',
     },
     {
-      id: "2",
-      value: "value-2",
-      label: "label-2"
-    }
-  ])
+      id: '2',
+      value: 'value-2',
+      label: 'label-2',
+    },
+  ]);
 }
 
 @Component({
   selector: 'app-shipping-method-picker',
   imports: [],
   templateUrl: './shipping-method-picker.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './shipping-method-picker.css',
 })
 export class ShippingMethodPicker {
