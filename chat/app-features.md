@@ -40,16 +40,24 @@
   - [x] ngAfterContentChecked
   - [x] ngAfterViewChecked
 - [x] learning directives
-- [ ] learning signals (compute, effect, update...)
+- [x] learning signals (compute, effect, update...)
 - [ ] Forms and Forms validation
+- [ ] learning about DI
+- [ ] Server side and hybrid-rendering
 - [x] learning HTTP clients
 - [x] setup backend server
 - [x] create basic api to test backend server
+- [ ] create service for fetch github query results using this API: https://api.github.com/search/repositories?q=<query>
+- [ ] What is changeDetection?
+- [ ] learning about new annotations in Angular v22
+- [ ] refactor Injectable to use @Service instead
 - [ ] create new chat POST /chats
 - [ ] create GET /chats
 - [ ] insert message in chat PUT /chats/new-message
-- [ ] learning pipes
+- [ ] learning components
+- [ ] learning templates
 - [ ] learning guards
+- [ ] Angular Aria
 - [ ] check if there is a chat history with user if yes display last messages
   - [x] get chat by id
   - [x] when click on chat should display chat template component instead

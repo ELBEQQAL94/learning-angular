@@ -1,5 +1,5 @@
-import { Component, linkedSignal, signal, Signal, ChangeDetectionStrategy } from '@angular/core';
-import { single } from 'rxjs';
+import { Component, signal, Signal, ChangeDetectionStrategy, inject } from '@angular/core';
+import { SearchService } from '../../services/search-service';
 
 interface ShippingMethod {
   id: string;
@@ -50,11 +50,16 @@ function getShippingOptions1(): Signal<ShippingMethod[]> {
   styleUrl: './shipping-method-picker.css',
 })
 export class ShippingMethodPicker {
+  private readonly searchService = inject(SearchService);
   shippingOptions = signal(getShippingOptions());
 
   selectedShippingOption = signal(this.shippingOptions()()[0]);
   // selectedShippingOption = linkedSignal(() => this.shippingOptions()()[0]);
 
+  ngOnInit() {
+    this.searchService.search('q').subscribe(data => console.log(`query result: ${JSON.stringify(data)}`)
+    );
+  }
   change(event: Event) {
     console.log(`event: ${(event.target as HTMLSelectElement).value}`);
     const index = (event.target as HTMLSelectElement).value;
